@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: iperf-test
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: iperf-test
+    spec:
+      containers:
+      - name: iperf-test-container
+        image: networkstatic/iperf3:latest
+        command: ["iperf3","-s"]
+        ports:
+        - containerPort: 5201
