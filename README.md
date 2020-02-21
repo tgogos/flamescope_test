@@ -21,7 +21,6 @@ Tests with `iperf`, `docker`, `kubernetes`
     
     # build docker image
     cd flamescope/
-    docker build -t flamescope .
     sudo docker build -t flamescope .
     
     # run and use a volume with your .perf files inside
